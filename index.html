@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Employee Management</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="app">
+
+  <!-- Header -->
+  <header>
+    <h1>Employee Management System</h1>
+    <p>Manage employees professionally</p>
+  </header>
+
+  <!-- Form Card -->
+  <div class="card">
+    <h2 id="formTitle">Add Employee</h2>
+
+    <input type="hidden" id="empId">
+
+    <div class="grid">
+      <input id="firstName" placeholder="First Name">
+      <input id="lastName" placeholder="Last Name">
+      <input id="email" placeholder="Email">
+      <input id="phone" placeholder="Phone">
+      <input id="salary" placeholder="Salary">
+      <input id="designation" placeholder="Designation">
+    </div>
+
+    <button onclick="saveEmployee()">Save Employee</button>
+    <p id="error" class="error"></p>
+  </div>
+
+  <!-- Search -->
+  <div class="search-box">
+    <input id="search" placeholder="Search employee by first name..." onkeyup="searchEmployee()">
+  </div>
+
+  <!-- Table Card -->
+  <div class="card">
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Phone</th>
+          <th>Designation</th>
+          <th>Salary</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody id="employeeTable"></tbody>
+    </table>
+  </div>
+
+</div>
+
+<script src="js/app.js"></script>
+</body>
+</html>
